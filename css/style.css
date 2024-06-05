@@ -104,6 +104,7 @@ span {
 .about-content h2{
     font-size: 42px;
     color: #131212f3;
+    font-weight: 600;
 }
 .about-content p{
     font-size: 20px;
@@ -121,6 +122,7 @@ span {
     display: flex;
     justify-content: center;
     margin: 1em 0 2em;
+    font-weight: 600;
 
 }
 .resume-content{
@@ -135,6 +137,7 @@ span {
 .resume h3{
     font-size: 32px;
     color: #a98401;
+    font-weight: 600;
 }
 .btn-box{
     display: flex;
