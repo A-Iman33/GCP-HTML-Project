@@ -19,10 +19,13 @@ jobs:
       
       - name: Configure Google Cloud  # Configure access to GCP
         uses: google-github-actions/setup-gcloud@v2  # Action to install gcloud and configure
-       
+      
+      - name: Set Google Cloud Project
+        run: gcloud config set project gcp-project-425513
+
       - name: Upload to Cloud Storage  # Upload website files to bucket
         run: |
-          gsutil -m cp -r . gs://a-iman-website
+          gsutil -m cp -r . gs://a-iman-website  # Use rsync to ensure changes are properly reflected
           
 env:
   GOOGLE_CLOUD_CREDENTIALS: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}  # Secret name for service account key
